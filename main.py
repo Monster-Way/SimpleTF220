@@ -8,8 +8,11 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-def cur_ts():
+def cur_ts_ms():
     return int(time.time() * 1000)
+
+def cur_ts_s():
+    return int(time.time())
 
 def fmt_ts(ts):
     if len(str(ts)) == 13:
@@ -21,7 +24,7 @@ def fmt_ts(ts):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print(cur_ts())
+    print(cur_ts_ms())
     # print(len(str(cur_ts()/1000)))
-    print(fmt_ts(cur_ts()))
+    print(fmt_ts(cur_ts_ms()))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
